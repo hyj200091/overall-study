@@ -1,0 +1,81 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle":"black"
+				
+			}
+		}
+	    ,{
+            "path" : "pages/classify/classify",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "分类",
+				"navigationBarTextStyle":"black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/collect/collect",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "收藏",
+				"navigationBarTextStyle":"black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+				"navigationBarTextStyle":"black"
+            }
+            
+        }
+        ,{
+            "path" : "pages/details/details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarBackgroundColor": "#d4d1c8"
+
+	},
+	"tabBar":{
+		"color":"#d4d1c8",
+		"selectedColor":"#e9b0a1",
+		"list": [
+		{
+			"iconPath":"static/tabbar/shouye.png",
+			"selectedIconPath":"./static/tabbar/shouyeed.png",
+			"pagePath":"pages/index/index",
+			"text":"首页"
+		},
+		{
+			"iconPath":"static/tabbar/fenlei.png",
+			"selectedIconPath":"./static/tabbar/fenleied.png",
+			"pagePath":"pages/classify/classify",
+			"text":"分类"
+		},
+		{
+			"iconPath":"static/tabbar/like.png",
+			"selectedIconPath":"./static/tabbar/liked.png",
+			"pagePath":"pages/collect/collect",
+			"text":"收藏"
+		},
+		{
+			"iconPath":"static/tabbar/wode.png",
+			"selectedIconPath":"./static/tabbar/wodeed.png",
+			"pagePath":"pages/my/my",
+			"text":"我的"
+		}]
+	}
+}
