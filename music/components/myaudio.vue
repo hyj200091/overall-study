@@ -79,6 +79,7 @@
 				uni.navigateTo({
 				    url: '/pages/details/details'
 				});
+				console.log(123121231321);
 			}
 		},
 		mounted() {
