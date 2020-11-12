@@ -1,5 +1,5 @@
 <template>
-	<view class="fixed-bottom rounded mx-2 mb-1" style="height: 160rpx; background-color: #d1ccc0;opacity: .9;">
+	<view class="fixed-bottom rounded mx-2 mb-1" style="height: 160rpx; background-color: #d1ccc0;opacity: .9;" @tap="toDetailPage">
 		<!-- 进度部分 -->
 		<view class="flex align-center justify-center font" style="color: #7a8388;height: 65rpx;">
 			<!-- 总时长 -->
@@ -21,7 +21,7 @@
 				<view>歌曲-{{audioName}}</view>
 			</view>
 			<!-- 音频按钮部分 -->
-			<view class="flex align-center">
+			<view class="flex align-center" @tap.stop>
 				<view class="animated" hover-class="pulse">
 					<my-icon iconId="icon-shangyishou" iconSize="75" @my-click="PreOrNext('pre')"></my-icon>
 				</view>
@@ -74,7 +74,12 @@
 				'PlayOrPause',
 				'PreOrNext',
 				'sliderToPlay'
-			])
+			]),
+			toDetailPage() {
+				uni.navigateTo({
+				    url: '/pages/details/details'
+				});
+			}
 		},
 		mounted() {
 			this.init()

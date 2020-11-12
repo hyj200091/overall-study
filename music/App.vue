@@ -13,9 +13,14 @@
 </script>
 
 <style>
-	/*引入一些全局需要的css*/
+	/*自定义css库*/
 	@import url("./common/css/free.css");
+	/* css动画库 */
 	@import url("./common/css/animate.css");
+	/* 矢量图标库 */
 	@import url("./common/css/iconfont.css");
+	/* 自定义css动画库 */
 	@import url("./common/css/myanimate.css");
+	/* 自定义css主题 */
+	@import url("./common/css/theme.css");
 </style>
