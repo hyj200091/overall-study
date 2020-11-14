@@ -26,3 +26,26 @@
 2020-11-14 22:38:31.518 [http-nio-8003-exec-1] INFO  c.s.user.controller.HelloController - info: hello
 2020-11-14 22:38:31.519 [http-nio-8003-exec-1] INFO  c.s.user.controller.HelloController - warn: hello
 2020-11-14 22:38:31.519 [http-nio-8003-exec-1] INFO  c.s.user.controller.HelloController - error: hello
+2020-11-14 22:42:46.714 [main] INFO  com.soft1851.user.Application - The following profiles are active: dev
+2020-11-14 22:42:47.586 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a3666c4-fea4-3f5e-9d2b-6e233edc3171
+2020-11-14 22:42:47.974 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8003 (http)
+2020-11-14 22:42:47.985 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2020-11-14 22:42:47.985 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-11-14 22:42:47.985 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-14 22:42:47.987 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-11-14 22:42:47.987 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-14 22:42:47.987 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-14 22:42:47.991 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-11-14 22:42:48.177 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-11-14 22:42:48.178 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1441 ms
+2020-11-14 22:42:48.254 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-14 22:42:48.254 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-14 22:42:48.263 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-11-14 22:42:48.264 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-14 22:42:48.441 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-14 22:42:49.968 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-14 22:42:50.086 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2020-11-14 22:42:50.123 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8003 (http) with context path ''
+2020-11-14 22:42:51.529 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-11-14 22:42:51.541 [main] INFO  com.soft1851.user.Application - Started Application in 9.278 seconds (JVM running for 10.522)
+2020-11-14 22:52:04.431 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
