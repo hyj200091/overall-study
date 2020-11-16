@@ -163,3 +163,5 @@ java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
+2020-11-16 21:04:53.085 [http-nio-8003-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2020-11-16 21:04:53.442 [http-nio-8003-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
