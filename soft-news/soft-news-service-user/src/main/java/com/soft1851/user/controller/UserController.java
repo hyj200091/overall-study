@@ -3,7 +3,8 @@ package com.soft1851.user.controller;
 import com.soft1851.api.BaseController;
 import com.soft1851.api.controller.user.UserControllerApi;
 import com.soft1851.pojo.AppUser;
-import com.soft1851.pojo.vo.UpdateUserInfoBO;
+import com.soft1851.pojo.bo.UpdateUserInfoBO;
+import com.soft1851.pojo.vo.AppUserVO;
 import com.soft1851.pojo.vo.UserAccountInfoVo;
 import com.soft1851.result.GraceResult;
 import com.soft1851.result.ResponseStatusEnum;
@@ -68,6 +69,21 @@ public class UserController extends BaseController implements UserControllerApi 
         // 执行更新用户信息操作
         userService.updateUserInfo(updateUserInfoBO);
         return GraceResult.ok();
+    }
+
+    @Override
+    public GraceResult getUserBasicInfo(String userId) {
+        // 0 判断不能为空
+        if (StringUtils.isBlank(userId)) {
+            return GraceResult.errorCustom(ResponseStatusEnum.UN_LOGIN);
+        }
+
+        // 1 查询userId
+        AppUser user = getUser(userId);
+        // 2 信息脱敏，设置不在显示
+        AppUserVO userVO = new AppUserVO();
+        BeanUtils.copyProperties(user,userVO);
+        return GraceResult.ok(userVO);
     }
 
     private AppUser getUser(String userId) {
