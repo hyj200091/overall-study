@@ -21,6 +21,7 @@ import java.util.Map;
  * @Author hyj
  * @Date 2020/11/15
  **/
+
 public class BaseController {
     // 这里要声明为public 要不子类不能使用
     @Autowired

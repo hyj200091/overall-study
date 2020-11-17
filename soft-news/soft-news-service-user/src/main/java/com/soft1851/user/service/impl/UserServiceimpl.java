@@ -7,11 +7,9 @@ import com.soft1851.pojo.bo.UpdateUserInfoBO;
 import com.soft1851.result.ResponseStatusEnum;
 import com.soft1851.user.mapper.AppUserMapper;
 import com.soft1851.user.service.UserService;
-import com.soft1851.utils.DateUtil;
-import com.soft1851.utils.DesensitizationUtil;
-import com.soft1851.utils.RedisOperator;
-import com.soft1851.utils.UserStatus;
+import com.soft1851.utils.*;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +25,7 @@ import java.util.Date;
  * @Author hyj
  * @Date 2020/11/16
  **/
+@Slf4j
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserServiceimpl implements UserService {
@@ -71,6 +70,7 @@ public class UserServiceimpl implements UserService {
 
     @Override
     public AppUser getUser(String userId) {
+        log.info("从数据库查询用户信息");
         return appUserMapper.selectByPrimaryKey(userId);
     }
 
@@ -88,5 +88,10 @@ public class UserServiceimpl implements UserService {
         if (result != 1) {
             GraceException.display(ResponseStatusEnum.USER_UPDATE_ERROR);
         }
+
+        String userId = updateUserInfoBO.getId();
+        // 再次查询用户最新信息，放入redis中
+        AppUser user = getUser(userId);
+        redis.set(REDIS_USER_INFO + ":" +userId, JsonUtil.objectToJson(user));
     }
 }
