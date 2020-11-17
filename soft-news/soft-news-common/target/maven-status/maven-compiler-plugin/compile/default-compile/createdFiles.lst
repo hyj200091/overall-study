@@ -8,6 +8,7 @@ com\soft1851\org\n3r\idworker\strategy\DefaultRandomCodeStrategy.class
 com\soft1851\utils\extend\AliyunResource.class
 com\soft1851\org\n3r\idworker\Test.class
 com\soft1851\org\n3r\idworker\utils\Ip.class
+META-INF\spring-configuration-metadata.json
 com\soft1851\org\n3r\idworker\Sid.class
 com\soft1851\org\n3r\idworker\strategy\DefaultWorkerIdStrategy.class
 com\soft1851\utils\IpUtil.class
