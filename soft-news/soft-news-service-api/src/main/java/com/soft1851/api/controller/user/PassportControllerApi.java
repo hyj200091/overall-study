@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * @Author hyj
  * @Date 2020/11/15
  **/
-@Api(value = "用户注册登录信息",tags = "{用户注册登录相关Controller}")
+@Api(value = "用户注册登录信息",tags = "用户注册登录Controller")
 @RequestMapping("passport")
 public interface PassportControllerApi {
 

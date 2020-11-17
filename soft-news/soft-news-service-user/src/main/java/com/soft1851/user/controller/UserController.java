@@ -1,7 +1,9 @@
 package com.soft1851.user.controller;
 
+import com.soft1851.api.BaseController;
 import com.soft1851.api.controller.user.UserControllerApi;
 import com.soft1851.pojo.AppUser;
+import com.soft1851.pojo.vo.UpdateUserInfoBO;
 import com.soft1851.pojo.vo.UserAccountInfoVo;
 import com.soft1851.result.GraceResult;
 import com.soft1851.result.ResponseStatusEnum;
@@ -11,7 +13,11 @@ import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import java.util.Map;
 
 /**
  * @ClassName UserController
@@ -21,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class UserController implements UserControllerApi {
+public class UserController extends BaseController implements UserControllerApi {
 
     private final AppUserMapper appUserMapper;
     private final UserService userService;
@@ -51,6 +57,19 @@ public class UserController implements UserControllerApi {
         BeanUtils.copyProperties(user,accountVo);
         return GraceResult.ok(accountVo);
     }
+
+    @Override
+    public GraceResult updateUserInfo(@Valid UpdateUserInfoBO updateUserInfoBO, BindingResult result) {
+        // 判断BindingResult是否保存错误的验证信息，如果有 直接return
+        if (result.hasErrors()) {
+           Map<String, String> errorMap = getErrors(result);
+            return GraceResult.errorMap(errorMap);
+        }
+        // 执行更新用户信息操作
+        userService.updateUserInfo(updateUserInfoBO);
+        return GraceResult.ok();
+    }
+
     private AppUser getUser(String userId) {
         // 本方法后续带扩展
         return userService.getUser(userId);
