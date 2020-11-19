@@ -11,4 +11,5 @@ D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\c
 D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\com\soft1851\api\HelloControllerApi.java
 D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\com\soft1851\api\config\CoresConfig.java
 D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\com\soft1851\api\interceptors\UserTokenInterceptor.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\com\soft1851\api\controller\files\FileUploadControllerApi.java
 D:\dev\社区项目\综合实训\soft-news\soft-news-service-api\src\main\java\com\soft1851\api\controller\user\PassportControllerApi.java

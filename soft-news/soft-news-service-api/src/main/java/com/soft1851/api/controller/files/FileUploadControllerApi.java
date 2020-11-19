@@ -1,4 +1,4 @@
-package com.soft1851.files.files;
+package com.soft1851.api.controller.files;
 
 import com.soft1851.result.GraceResult;
 import io.swagger.annotations.Api;
@@ -27,4 +27,15 @@ public interface FileUploadControllerApi {
     @ApiOperation(value = "上传用户头像",notes = "上传用户头像",httpMethod = "POST")
     @PostMapping("uploadFace")
     GraceResult uploadFace(@RequestParam String userId, MultipartFile file) throws  Exception;
+
+    /**
+     * 上传多个文件夹
+     * @param userId 用户id
+     * @param files 文件数组
+     * @return 返回
+     * @throws Exception 异常
+     */
+    @PostMapping("/uploadSomeFiles")
+    GraceResult uploadSomeFiles(@RequestParam String userId,
+                                MultipartFile[] files) throws Exception;
 }

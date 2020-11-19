@@ -1,6 +1,5 @@
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\controller\FileUploadController.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\resource\FileResource.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\service\UploadService.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\service\impl\UploadServiceImpl.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\Application.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\files\files\FileUploadControllerApi.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\controller\FileUploadController.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\resource\FileResource.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\Application.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\service\UploadService.java
+D:\dev\社区项目\综合实训\soft-news\soft-news-service-files\src\main\java\com\soft1851\service\impl\UploadServiceImpl.java

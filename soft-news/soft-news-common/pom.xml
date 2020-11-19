@@ -83,7 +83,7 @@
             <artifactId>joda-time</artifactId>
         </dependency>
 
-        <!-- 阿里云相关依赖 -->
+        <!-- 第三方云厂商阿相关依赖 -->
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
@@ -99,7 +99,6 @@
             <artifactId>aliyun-java-sdk-green</artifactId>
             <version>3.5.1</version>
         </dependency>
-
         <!--fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>

@@ -1,4 +1,4 @@
-package com.soft1851.files.resource;
+package com.soft1851.resource;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
