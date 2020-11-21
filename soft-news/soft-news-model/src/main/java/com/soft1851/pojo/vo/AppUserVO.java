@@ -6,29 +6,29 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * @author xunmi
  * @ClassName AppUserVO
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/17
+ * @Version 1.0
  **/
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class AppUserVO {
     private String id;
     private String nickname;
     private String face;
+
     /**
      * 激活状态
      */
     private Integer activeStatus;
-
     /**
      * 我的关注数
      */
     private Integer myFollowCounts;
-
     /**
      * 我的粉丝数
      */

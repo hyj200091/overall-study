@@ -5,7 +5,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
+import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.green.model.v20180509.ImageSyncScanRequest;
+import com.aliyuncs.green.model.v20180509.TextScanRequest;
 import com.aliyuncs.http.FormatType;
 import com.aliyuncs.http.HttpResponse;
 import com.aliyuncs.http.MethodType;
@@ -15,24 +17,23 @@ import com.aliyuncs.profile.IClientProfile;
 import com.soft1851.enums.ArticleReviewLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
-import java.util.Date;
-import java.util.UUID;
+import java.util.*;
 
 /**
+ * @author
  * @ClassName AliImageReviewUtil
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/20
+ * @Version 1.0
  **/
 @Component
 public class AliImageReviewUtil {
     @Autowired
     private AliyunResource aliyunResource;
+
     public boolean reviewImage(String imgUrl) throws Exception {
         IClientProfile profile = DefaultProfile
-                .getProfile("cn-shanghai", "LTAIgdZanTs9A7Zp", " j6VIpGHakxqQFjS3t2lWVPQJ3cknS5");
+                .getProfile("cn-shanghai", aliyunResource.getAccessKeyId(), aliyunResource.getAccessKeySecret());
         DefaultProfile
                 .addEndpoint("cn-shanghai", "cn-shanghai", "Green", "green.cn-shanghai.aliyuncs.com");
         IAcsClient client = new DefaultAcsClient(profile);

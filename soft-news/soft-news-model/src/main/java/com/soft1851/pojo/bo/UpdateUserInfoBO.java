@@ -1,26 +1,25 @@
 package com.soft1851.pojo.bo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
 import java.util.Date;
 
 /**
+ * @author
  * @ClassName UpdateUserInfoBO
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/17
+ * @Version 1.0
  **/
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UpdateUserInfoBO {
+
     @NotBlank(message = "用户ID不能为空")
     private String id;
 
@@ -39,23 +38,20 @@ public class UpdateUserInfoBO {
     private String email;
 
     @NotNull(message = "请选择一个性别")
-    @Min(value = 0,message = "选择性别不正确")
-    @Max(value = 1,message = "选择性别不正确")
+    @Min(value = 0, message = "性别选择不正确")
+    @Max(value = 1, message = "性别选择不正确")
     private Integer sex;
 
-    /**
-     * 前端日期字符串传到后端，转换为Date类型
-     */
-    @NotNull(message = "选择生日日期")
+    @NotNull(message = "请选择生日日期")
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     private Date birthday;
 
-    @NotBlank(message = "请选择所在城市")
+    @NotBlank(message = "请选择所在省份")
     private String province;
 
     @NotBlank(message = "请选择所在城市")
     private String city;
 
-    @NotBlank(message = "请选择所在城市")
+    @NotBlank(message = "请选择所在县城")
     private String district;
 }

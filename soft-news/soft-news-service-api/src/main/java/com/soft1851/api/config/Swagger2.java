@@ -15,14 +15,14 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @ClassName Swagger2
- * @Description TODO
- * @Author hyj
- * @Date 2020/11/15
+ * @description:
+ * @author: mqxu
+ * @create: 2020-11-14
  **/
 @Configuration
 @EnableSwagger2
 public class Swagger2 {
+
     @Bean
     public Docket createRestApi() {
 
@@ -40,9 +40,9 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("新闻·自媒体接口api")
-                .contact(new Contact("mqxu",
+                .contact(new Contact("xuyuan",
                         "http://www.sn.com",
-                        "16422802@qq.com"))
+                        "2414704205@qq.com"))
                 .description("专为新闻·自媒体平台提供的api文档")
                 .version("1.0.1")
                 .termsOfServiceUrl("https://www.sn.com")

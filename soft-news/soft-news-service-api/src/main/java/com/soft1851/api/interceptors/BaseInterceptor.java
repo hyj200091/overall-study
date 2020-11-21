@@ -7,10 +7,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @ClassName 基础拦截器
+ * @author
+ * @ClassName BaseInterceptor
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/17
+ * @Version 1.0
  **/
 public class BaseInterceptor {
 

@@ -5,55 +5,39 @@ import com.soft1851.result.GraceResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 /**
- * @ClassName UserControllerApi
+ * @author
+ * @ClassName UserController
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/14
+ * @Version 1.0
  **/
-@Api(value = "用户信息相关Controller",tags = "用户相关Controller")
+@Api(value = "用户信息相关Controller", tags = {"用户信息相关Controller"})
 @RequestMapping("user")
 public interface UserControllerApi {
-    /**
-     * 获取所有用户
-     * @return users 所有用户信息a
-     */
-    @ApiOperation(value = "获得所有用户信息",notes = "获得所有用户信息",httpMethod = "POST")
-    @PostMapping("/all")
+
+    @ApiOperation(value = "获得所有用户信息", notes = "获得所有用户信息", httpMethod = "GET")
+    @GetMapping("/all")
     GraceResult getAllUsers();
 
     /**
      * 获得用户基本信息
      * @param userId
-     * @return 用户基本信息
+     * @return
      */
-    @ApiOperation(value = "获得用户基本信息",notes = "获得用户基本信息",httpMethod = "POST")
-    @PostMapping("/userInfo")
+    @ApiOperation(value = "获得用户账号信息", notes = "获得用户账号信息", httpMethod = "POST")
+    @PostMapping("/userBasicInfo")
     GraceResult getUserInfo(@RequestParam String userId);
 
-    /**
-     * 更新用户信息
-     * @param updateUserInfoBO 入参
-     * @param result 校验结果
-     * @return 返回
-     */
+    @ApiOperation(value = "完善用户信息", notes = "完善用户信息", httpMethod = "POST")
     @PostMapping("/updateUserInfo")
-    @ApiOperation(value = "完善用户信息",notes = "完善用户信息",httpMethod = "POST")
     GraceResult updateUserInfo(@RequestBody @Valid UpdateUserInfoBO updateUserInfoBO, BindingResult result);
 
-    /**
-     * 获得用户基础信息
-     * @param userId 用户id
-     * @return GraceResult
-     */
+    @ApiOperation(value = "获得用户基础信息", notes = "获得用户基础信息", httpMethod = "POST")
     @PostMapping("/getUserInfo")
-    @ApiOperation(value = "获得用户基本信息",notes = "获得用户基础信息",httpMethod = "POST")
     GraceResult getUserBasicInfo(@RequestParam String userId);
 }

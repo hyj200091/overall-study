@@ -1,8 +1,9 @@
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\HelloController.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\PassportController.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\mapper\AppUserMapper.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\mapper\FansMapper.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\service\impl\UserServiceimpl.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\service\UserService.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\UserController.java
-D:\dev\社区项目\综合实训\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\Application.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\mapper\AppUserMapper.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\mapper\FansMapper.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\service\impl\UserServiceImpl.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\UserController.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\Application.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\HelloController.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\PassportController.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\service\UserService.java
+D:\uni-app2\soft-news\soft-news-service-user\src\main\java\com\soft1851\user\controller\FansController.java

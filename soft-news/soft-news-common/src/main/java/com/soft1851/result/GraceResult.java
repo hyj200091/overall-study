@@ -3,9 +3,11 @@ package com.soft1851.result;
 import java.util.Map;
 
 /**
- * @description: 自定义优雅的响应数据结构
- * @author: yjhou
- * @create: 2020-11-14
+ * @author
+ * @ClassName GraceResult
+ * @Description 自定义优雅的响应数据结构
+ * @Date 2020/11/14
+ * @Version 1.0
  **/
 public class GraceResult {
 

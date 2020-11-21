@@ -10,13 +10,12 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 /**
  * 统一异常拦截处理
  * 可以针对异常的类型进行捕获，然后返回json信息到前端
- * @ClassName GraceExceptionHandler
- * @Description TODO
- * @Author hyj
- * @Date 2020/11/16
- **/
+ * @author:
+ * @create: 2020-11-15
+ */
 @ControllerAdvice
 public class GraceExceptionHandler {
+
     @ExceptionHandler(MyCustomException.class)
     @ResponseBody
     public GraceResult returnMyException(MyCustomException e) {
@@ -29,4 +28,5 @@ public class GraceExceptionHandler {
     public GraceResult returnMaxUploadSizeExceededException(MaxUploadSizeExceededException e) {
         return GraceResult.errorCustom(ResponseStatusEnum.FILE_MAX_SIZE_ERROR);
     }
+
 }

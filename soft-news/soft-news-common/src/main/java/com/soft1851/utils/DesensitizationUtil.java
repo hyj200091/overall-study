@@ -3,10 +3,11 @@ package com.soft1851.utils;
 /**
  * 通用脱敏工具类
  * 可用于：用户名、手机号、邮箱、地址等
- * @Author hyj
- * @Date 2020/11/16
- **/
+ *
+ * @author mqxu
+ */
 public class DesensitizationUtil {
+
     private static final int SIZE = 6;
     private static final String SYMBOL = "*";
 
@@ -67,4 +68,5 @@ public class DesensitizationUtil {
         }
         return stringBuilder.toString();
     }
+
 }

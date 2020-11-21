@@ -1,20 +1,24 @@
 package com.soft1851.utils.extend;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * @ClassName 阿里云资源类
+ * @author
+ * @ClassName AliyunResource
  * @Description TODO
- * @Author hyj
  * @Date 2020/11/15
+ * @Version 1.0
  **/
 @Component
 @PropertySource("classpath:aliyun.properties")
 @ConfigurationProperties(prefix = "aliyun")
 public class AliyunResource {
+
     private String accessKeyId;
+
     private String accessKeySecret;
 
     public String getAccessKeyId() {
@@ -32,4 +36,5 @@ public class AliyunResource {
     public void setAccessKeySecret(String accessKeySecret) {
         this.accessKeySecret = accessKeySecret;
     }
+
 }

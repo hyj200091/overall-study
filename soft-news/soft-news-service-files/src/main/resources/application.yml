@@ -1,3 +1,4 @@
+
 ############################################################
 #
 # 文件微服务
@@ -24,8 +25,8 @@ spring:
     time-zone: GMT+8
   servlet:
     multipart:
-      max-file-size: 512000   # 请求的文件大小限制为500kb
-      max-request-size: 512000
+      max-file-size: 5120000   # 请求的文件大小限制为5mb,单位是字节
+      max-request-size: 5120000
 
 ############################################################
 #
@@ -35,4 +36,4 @@ spring:
 fdfs:
   connect-timeout: 3000
   so-timeout: 3000
-  tracker-list: 39.97.252.60:22122
+  tracker-list: 118.31.45.29:22122

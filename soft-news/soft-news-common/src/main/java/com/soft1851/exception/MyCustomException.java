@@ -5,12 +5,12 @@ import com.soft1851.result.ResponseStatusEnum;
 /**
  * 自定义异常
  * 便于解耦，service与controller错误的解耦，不会被service返回的类型而限制
- * @ClassName MyCustomException
- * @Description TODO
- * @Author hyj
- * @Date 2020/11/16
- **/
-public class MyCustomException extends RuntimeException{
+ *
+ * @author:
+ * @create: 2020-11-15
+ */
+public class MyCustomException extends RuntimeException {
+
     private ResponseStatusEnum responseStatusEnum;
 
     public MyCustomException(ResponseStatusEnum responseStatusEnum) {

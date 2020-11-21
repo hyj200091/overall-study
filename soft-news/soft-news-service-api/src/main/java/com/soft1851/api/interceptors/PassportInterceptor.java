@@ -12,70 +12,50 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * @author
  * @ClassName PassportInterceptor
- * @Description 通行证接口拦截
- * @Author hyj
- * @Date 2020/11/16
+ * @Description 通行证接口拦截器
+ * @Date 2020/11/15
+ * @Version 1.0
  **/
-public class PassportInterceptor implements HandlerInterceptor {
+public class PassportInterceptor extends BaseInterceptor implements HandlerInterceptor {
 
     @Autowired
-    private RedisOperator redis;
+    public RedisOperator redis;
 
-    public static final String MOBILE_SMSCODE  = "mobile:smscode";
+    public static  final  String  MOBILE_SMSCODE = "mobile:smscode";
+
 
     /**
-     * 拦截请求： 访问controller之前
-     * @param  request 请求
-     * @param  response 响应
-     * @param  handle  拦截
-     * @return boolean
-     * @throws Exception 抛出异常
+     * 拦截请求，访问controller之前
+     * @param request
+     * @param response
+     * @param handler
+     * @return
+     * @throws Exception
      */
-
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object handle) throws Exception {
-        // 获得用户ip
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        // 获取用户 ip
         String userIp = IpUtil.getRequestIp(request);
-        // 检查redis中是否存在这个ip
+        // 检查 redis 中是否存在这个 ip
         boolean keyIsExist = redis.keyIsExist(MOBILE_SMSCODE + ":" + userIp);
         if (keyIsExist) {
             GraceException.display(ResponseStatusEnum.SMS_NEED_WAIT_ERROR);
             // System.out.println("短信发送频率太大！");
-            // 请求拦截
+            // 请求被拦截
             return false;
         }
-        // true 请求通过验证 放行
+        // true：请求通过验证。放行
         return true;
     }
 
-    /**
-     * 请求访问到controller之后，渲染视图之前
-     *
-     * @param request  请求
-     * @param response 响应
-     * @param  handle 拦截
-     * @param modelAndView 视图
-     * @throws Exception 抛出异常
-     */
-
     @Override
-    public  void  postHandle(HttpServletRequest request, HttpServletResponse response, Object handle, ModelAndView modelAndView) throws Exception {
-
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
     }
 
-    /**
-     *  请求访问controller之后，渲染图层之前
-     *
-     * @param  request 请求
-     * @param  response 响应
-     * @param  handle 拦截
-     * @param  modelAndView 视图
-     * @throws Exception 抛出异常
-     */
-
     @Override
-    public  void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handle,Exception ex) throws Exception{
-
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
     }
+
 }

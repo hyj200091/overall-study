@@ -9,7 +9,7 @@ import java.net.URLDecoder;
 
 /**
  * @description: 文件工具类
- * @author: ysx
+ * @author: mqxu
  * @create: 2020-11-15
  **/
 public class FileUtil {
