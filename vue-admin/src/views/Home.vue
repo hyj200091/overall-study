@@ -3,8 +3,8 @@
 	  <div class="position-absolute rounded-circle" style="width: 40%; height: 340px;top: 130px;left: 180px;">
 		  <div class="flex-1">
 			  <img src="../assets/login.png" class="rounded w-100" style="height: 100%;" model="heightFit" v-show="!isFaceLogin">
-			  <video id="video" width="630px" height="370px" autoplay="autoplay" v-show="isFaceLogin"></video>
-			  <canvas id="canvas" width="630px" height="370px" v-show="isFaceLogin"></canvas>
+			  <video id="video" width="500px" height="400px" autoplay="autoplay" v-show="isFaceLogin"></video>
+			  <canvas id="canvas" width="500px" height="400px" v-show="isFaceLogin"></canvas>
 		  </div>
 	  </div>
 	  <div class="position-absolute pt-2 " style="width: 300px; height: 340px;top: 110px;right: 210px;">
@@ -64,7 +64,7 @@ export default {
 			  let video = document.getElementById('video')
 			  let canvas = document.getElementById('canvas')
 			  let ctx = canvas.getContext('2d')
-			  ctx.drawImage(video , 0 , 0 , 630 , 370)
+			  ctx.drawImage(video , 0 , 0 , 500 , 400)
 			  let img = document.getElementById('canvas').toDataURL()
 			  // 截取base64 图片
 			  console.log(img)
